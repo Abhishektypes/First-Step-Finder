@@ -1,0 +1,17 @@
+/* Ensure all images in the gallery are the same size */
+.gallery img {
+    width: 100%;
+    height: 250px; /* Set a fixed height */
+    object-fit: cover; /* Ensures the image covers the area without stretching */
+    margin-bottom: 15px;
+}
+
+#uploadedImages img {
+    width: 100%; 
+    height: 250px;
+    object-fit: cover;
+}
+
+.row img {
+    border-radius: 8px; /* Add rounded corners to the images */
+}

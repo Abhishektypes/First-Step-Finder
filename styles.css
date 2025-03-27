@@ -1,0 +1,97 @@
+/* styles/styles.css */
+
+/* Importing Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Open+Sans&display=swap');
+
+/* Global Styles */
+body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    background-color: greenyellow; /* Light cream background */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 1rem;
+}
+
+a {
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #0D7C66; /* Dark teal on hover */
+}
+
+/* Header */
+header {
+    background-color: #0D7C66; /* Dark teal */
+    color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header .nav-link {
+    font-weight: 600;
+    color: #fff !important;
+}
+
+header .nav-link:hover {
+    color: #F6EACB !important; /* Light cream on hover */
+}
+
+header .logo img {
+    max-height: 60px;
+}
+
+/* About Us Section */
+.about-us {
+    background-color: #fff; /* White background for contrast */
+}
+
+/* Impact Statistics Section */
+.impact-statistics {
+    background-color: #f8f9fa; /* Light gray background */
+}
+
+/* Footer */
+footer {
+    background-color: #0D7C66; /* Dark teal */
+    color: #fff;
+    padding: 20px 0;
+}
+
+footer .newsletter h5 {
+    margin-bottom: 10px;
+}
+
+footer .social-media a {
+    margin: 0 10px;
+}
+
+/* Team Card Styles */
+.card {
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.card img {
+    border-bottom: 5px solid #0D7C66; /* Dark teal */
+}
+
+/* Additional Styles */
+.additional-images {
+    background-color: #f8f9fa;
+}
+
+.additional-images h2 {
+    margin-bottom: 30px;
+}
+
+.additional-images img {
+    border-radius: 10px;
+}

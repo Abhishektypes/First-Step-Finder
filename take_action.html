@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Take Action - Sustainable Environment</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #4CAF50;
+        }
+        p {
+            line-height: 1.6;
+            color: #333;
+        }
+        .action-section {
+            text-align: center;
+            margin: 30px 0;
+        }
+        .action-section button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 30px;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .action-section button:hover {
+            background-color: #45a049;
+        }
+        footer {
+            text-align: center;
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+        /* Modal styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+        .modal-content {
+            background-color: white;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 60%;
+            border-radius: 10px;
+        }
+        .modal-header, .modal-footer {
+            text-align: center;
+            padding: 10px 0;
+        }
+        .modal-header h2 {
+            color: #4CAF50;
+        }
+        .modal-footer button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .modal-footer button:hover {
+            background-color: #45a049;
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Take Action for the Environment</h1>
+    <p>Help us take practical steps towards a greener, healthier planet.</p>
+</header>
+
+<div class="container">
+    <h1>How You Can Help</h1>
+    <p>
+        Your actions today can create a better tomorrow. Here’s how you can make an impact:
+    </p>
+    <ul>
+        <li>Volunteer in community clean-ups and tree planting</li>
+        <li>Participate in awareness campaigns and eco-friendly initiatives</li>
+        <li>Advocate for sustainable practices at local and global levels</li>
+        <li>Reduce your carbon footprint by adopting green practices</li>
+        <li>Educate others about environmental conservation</li>
+    </ul>
+
+    <div class="action-section">
+        <h2>Take Action Now</h2>
+        <p>Join us in taking steps towards a sustainable future. Start by signing up to volunteer.</p>
+        <button id="takeActionBtn">Sign Up to Volunteer</button>
+    </div>
+</div>
+
+<!-- The Modal -->
+<div id="actionModal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <span class="close">&times;</span>
+            <h2>Volunteer for Sustainable Environment</h2>
+        </div>
+        <div class="modal-body">
+            <p>Please fill in your details to volunteer:</p>
+            <form action="take_action.php" method="POST">
+                <label for="name">Full Name:</label><br>
+                <input type="text" id="name" name="name" required><br><br>
+                
+                <label for="email">Email Address:</label><br>
+                <input type="email" id="email" name="email" required><br><br>
+                
+                <label for="phone">Phone Number:</label><br>
+                <input type="tel" id="phone" name="phone" required><br><br>
+                
+                <label for="availability">Availability:</label><br>
+                <select id="availability" name="availability">
+                    <option value="weekdays">Weekdays</option>
+                    <option value="weekends">Weekends</option>
+                    <option value="both">Both</option>
+                </select><br><br>
+                <div class="modal-footer">
+            <button type="submit">Submit</button>
+        </div>
+            </form>
+        </div>
+        
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2024 Sustainable Environment Initiative. All Rights Reserved.</p>
+</footer>
+
+<script>
+    // Get modal and button elements
+    var modal = document.getElementById("actionModal");
+    var btn = document.getElementById("takeActionBtn");
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks the button, open the modal
+    btn.onclick = function() {
+        modal.style.display = "block";
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+</script>
+
+</body>
+</html>
